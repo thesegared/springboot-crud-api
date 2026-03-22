@@ -1,0 +1,57 @@
+# =========================
+# Spring Boot / Java
+# =========================
+# Directorio de compilación
+target/
+out/
+
+# Archivos de log
+*.log
+
+# Archivos temporales de Eclipse / IntelliJ / VSCode
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+*.db
+*.h2.db
+*.mv.db
+
+# Dependencias descargadas
+/.mvn/wrapper/maven-wrapper.jar
+/.gradle/
+
+# =========================
+# Node / Angular
+# =========================
+# Node modules
+frontend/node_modules/
+
+# Directorio de build de Angular
+frontend/dist/
+frontend/out-tsc/
+frontend/.angular/
+
+# Archivos de log de npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configuración del editor
+frontend/.vscode/
+
+# =========================
+# Archivos del sistema
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Otros
+# =========================
+.env
