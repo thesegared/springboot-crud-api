@@ -1,0 +1,78 @@
+<div class="container mt-5">
+
+  <h1 class="text-center mb-4">Gestión de Personas</h1>
+
+  <div class="mb-3">
+    <input class="form-control" placeholder="Buscar persona..." [(ngModel)]="busqueda" (input)="buscar()">
+  </div>
+
+  <div class="card p-3 mb-4">
+
+    <h4>Agregar Persona</h4>
+
+    <div class="row">
+
+      <div class="col-md-5">
+        <input [(ngModel)]="nuevaPersona.nombre" class="form-control" placeholder="Nombre">
+      </div>
+
+      <div class="col-md-5">
+        <input [(ngModel)]="nuevaPersona.email" class="form-control" placeholder="Email">
+      </div>
+
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100" (click)="editando ? actualizarPersona() : agregarPersona()">
+
+          {{editando ? 'Actualizar' : 'Agregar'}}
+
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="card p-3">
+
+    <h4>Lista de Personas</h4>
+
+    <table class="table table-striped mt-3">
+
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let persona of personasFiltradas">
+
+          <td>{{persona.id}}</td>
+          <td>{{persona.nombre}}</td>
+          <td>{{persona.email}}</td>
+
+          <td>
+
+            <button class="btn btn-warning btn-sm me-2" (click)="editarPersona(persona)">
+              Editar
+            </button>
+
+            <button class="btn btn-danger btn-sm" (click)="eliminarPersona(persona.id)">
+              Eliminar
+            </button>
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
